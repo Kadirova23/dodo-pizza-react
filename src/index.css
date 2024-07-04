@@ -1,0 +1,22 @@
+@import "/fonts/font.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  width: 100%;
+}
+
+.pizza__container {
+  display: flex;
+  flex-direction: row;
+  width: 1024px;
+  margin: 0 auto;
+}

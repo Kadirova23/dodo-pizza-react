@@ -1,0 +1,109 @@
+.modal {
+  &__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 32px;
+    width: 409px;
+    min-height: 399px;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+
+  &__title {
+    margin: 0px 0px 8px;
+    color: rgb(0, 0, 0);
+    font: 500 normal 36px/1 "Dodo";
+  }
+
+  &__text {
+    margin: 0px 0px 24px;
+    font: 600 normal 16px/1.2 "Dodo";
+    color: rgb(92, 99, 112);
+  }
+
+  &__close__icon {
+    position: absolute;
+    top: 13px;
+    right: -38px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out 0s;
+
+    &:hover {
+      transform: scale(1.11);
+    }
+  }
+}
+
+.button {
+  margin-top: auto;
+}
+
+.phone_input {
+  &__box {
+    gap: 8px;
+  }
+
+  &__country {
+    &_box {
+      --react-international-phone-border-radius: 12px;
+    }
+
+    &_btn {
+      height: 56px;
+      padding: 0 20px 0 16px;
+      border-radius: 12px !important;
+    }
+  }
+
+  &__number_box {
+    width: 100%;
+    --react-international-phone-height: 56px;
+    padding: 16px !important;
+    border-radius: 12px !important;
+    font: 500 normal 16px/1.2 "Dodo" !important;
+    transition: all 100ms ease-out;
+
+    &:focus {
+      border-color: orangered;
+    }
+  }
+}
+
+.label__box {
+  display: flex;
+  color: rgb(92, 99, 112);
+  margin-bottom: 8px;
+  font: 500 normal 14px/1.2 "Dodo";
+  gap: 12px;
+
+  &_country {
+    width: 68px;
+  }
+
+  &__number {
+    width: 191px;
+  }
+}

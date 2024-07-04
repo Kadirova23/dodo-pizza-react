@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Dodo";
+  src: url("./Dodo.woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Potential";
+  src: url("./Header.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
