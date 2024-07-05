@@ -8,6 +8,7 @@ import Addons from "../Addons/Addons";
 import { Button } from "../Button";
 import { addons } from "@/constants/modal.data";
 import { formatPrice } from "@/utilities";
+import { Tooltip } from "../Tooltip";
 
 const Modal: React.FC<ModalProps> = ({ data }: ModalProps) => {
   const { toggleModal } = useContext(ModalContext);
@@ -16,7 +17,7 @@ const Modal: React.FC<ModalProps> = ({ data }: ModalProps) => {
   const [isTooltipOpen, setIsTooltipOpen] = useState<boolean>(false);
   const [selectedAddons, setSelectedAddons] = useState<string[]>([]);
 
-  const openTooltip = () => {
+  const toggleTooltip = () => {
     setIsTooltipOpen(!isTooltipOpen);
   };
 
@@ -153,13 +154,24 @@ const Modal: React.FC<ModalProps> = ({ data }: ModalProps) => {
           <div className={styles.pizza__content}>
             <div className={styles.pizza__wrap}>
               <div className={styles.pizza__details}>
-                <div className={styles.pizza__name_container}>
+                <div className={styles.pizza__container}>
                   <h1 className={styles.pizza__name}>{data.title}</h1>
-                  <img
-                    className={styles.pizza__nutritions}
-                    src="/icons/info-icon.svg"
-                    onClick={openTooltip}
-                  />
+                  <div className={styles.pizza__tooltip}>
+                    <img
+                      className={styles.pizza__nutritions}
+                      src="/icons/info-icon.svg"
+                      onClick={toggleTooltip}
+                    />
+                    {isTooltipOpen && (
+                      <Tooltip
+                        weight={data.weight}
+                        nutritions={data.nutritions}
+                        pizzaSize={pizzaSize}
+                        pizzaDough={pizzaDough}
+                        diameter={data.diameter}
+                      />
+                    )}
+                  </div>
                 </div>
                 <p className={styles.pizza__diameter}>
                   {pizzaParameters(

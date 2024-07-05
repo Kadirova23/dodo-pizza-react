@@ -1,6 +1,6 @@
 .switch {
   &__outer {
-    padding: 2px;
+    padding: 2px 2px 1.5px;
     border-radius: 9999px;
     transform: translateZ(0px);
     background-color: rgb(243, 243, 247);
@@ -25,6 +25,7 @@
     &.disabled {
       color: rgba(0, 0, 0, 0.3);
       cursor: not-allowed;
+      text-shadow: none !important;
     }
 
     &:hover {

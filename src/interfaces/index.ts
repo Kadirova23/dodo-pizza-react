@@ -91,5 +91,7 @@ export interface ThinDoughTypeSize extends Omit<SizeInterface, "small"> {}
 export interface TooltipInterface {
   weight: WeightInterface;
   nutritions: NutritionsInterface[];
-  size: SizeInterface;
+  pizzaSize: number;
+  pizzaDough: number;
+  diameter: Diameter;
 }

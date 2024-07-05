@@ -1,0 +1,52 @@
+.tooltip {
+  &__container {
+    position: absolute;
+    left: -218px;
+    top: 36px;
+    width: 250px;
+    padding: 12px;
+    margin-top: 0px;
+    border-radius: 10px;
+    background-color: rgb(55, 53, 53);
+    color: rgb(255, 255, 255);
+    font: 500 14px/1.2 "Dodo";
+    cursor: pointer;
+
+    &_svg {
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      top: -12px;
+      right: 9px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font: 500 normal 12px/1.16 "Dodo";
+    opacity: 0.5;
+  }
+}
+
+.nutritions {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    font: 500 normal 12px/1.08 "Dodo";
+  }
+}
+
+.params {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

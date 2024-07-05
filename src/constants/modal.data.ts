@@ -109,11 +109,6 @@ export const pizzas: Pizza[] = [
     ingredients: [
       { id: "1", title: "Томатный соус" },
       { id: "2", title: "Моцарелла" },
-      // { id: "2", title: "Моцарелла" },
-      // { id: "2", title: "Моцарелла" },
-      // { id: "2", title: "Моцарелла" },
-      // { id: "2", title: "Моцарелла" },
-      // { id: "2", title: "Моцарелла" },
     ],
     addons: ["1", "2", "3", "4", "5", "6"],
     weight: {
@@ -135,6 +130,25 @@ export const pizzas: Pizza[] = [
       },
     },
     nutritions: [
+      {
+        title: "Энерг. ценность",
+        unit: "ккал",
+        doughType: {
+          traditional: {
+            size: {
+              small: 228.8,
+              medium: 224,
+              large: 217.1,
+            },
+          },
+          thin: {
+            size: {
+              medium: 217.2,
+              large: 224,
+            },
+          },
+        },
+      },
       {
         title: "Белки",
         unit: "г",
